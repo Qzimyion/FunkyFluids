@@ -31,8 +31,7 @@ public class NonNewtonianBlock extends HalfTransparentBlock {
             Entity entity = entitycollisioncontext.getEntity();
             if (entity != null) {
                 boolean flag = entity instanceof FallingBlockEntity;
-                if (flag || hasFeatherFallingIV((LivingEntity) entity) || entity.fallDistance <= 0
-                        && entity.isSprinting() && Context.isAbove(Shapes.block(), Pos, false) && !Context.isDescending()) {
+                if (flag || hasFeatherFallingIV((LivingEntity) entity) || entity.fallDistance <= 0 && entity.isSprinting() && Context.isAbove(Shapes.block(), Pos, false) && !Context.isDescending()) {
                     return Shapes.block();
                 }
             }
@@ -49,7 +48,7 @@ public class NonNewtonianBlock extends HalfTransparentBlock {
                 Vec3 RunningSpeed = new Vec3(0.002, 0.001, 0.0025);
                 entity.makeStuckInBlock(state, RunningSpeed);
             } else {
-                Vec3 WalkSpeed = new Vec3(0.8, 0.8, 0.85);
+                Vec3 WalkSpeed = new Vec3(0.9f, 1.5, 0.9f);
                 entity.makeStuckInBlock(state, WalkSpeed);
             }
             if (entity.isShiftKeyDown()){
@@ -60,6 +59,8 @@ public class NonNewtonianBlock extends HalfTransparentBlock {
         }
         super.entityInside(state, level, pos, entity);
     }
+
+
 
     public static boolean hasFeatherFallingIV(LivingEntity livingEntity) {
         return EnchantmentHelper.getEnchantmentLevel(Enchantments.FEATHER_FALLING, livingEntity) == 4;
