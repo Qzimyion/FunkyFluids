@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bottleinacloud:block/cloud_block"
+    }
+  }
+}

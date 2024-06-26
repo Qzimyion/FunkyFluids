@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "bottleinacloud"
+version = "${version}"
+displayName = "BottleInACloud"
+authors = "Qzimyion"
+description = '''
+Adds a Cloud in a bottle item and cloud blocks in a
+unique way involving non newtonian fluids.
+'''
+logoFile = ""
+
+[[dependencies.bottleinacloud]]
+modId = "neoforge"
+type = "required"
+versionRange = "[20.6,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bottleinacloud]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.20.6,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bottleinacloud]]
+modId = "architectury"
+type = "required"
+versionRange = "[12.1.2,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "bottleinacloudneo.mixins.json"

@@ -1,0 +1,30 @@
+/give Player793 bottleinacloud:cloud_in_bottle
+/setblock 10 72 -40 bottleinacloud:cloud_block
+/setblock 12 68 -39 bottleinacloud:cloud_block
+/setblock 12 68 -38 bottleinacloud:cloud_block
+/setblock 12 67 -39 bottleinacloud:cloud_block
+/setblock 12 67 -38 bottleinacloud:cloud_block
+/give Player648 bottleinacloud:cloud_in_bottle
+/give Player648 bottleinacloud:soul_bottle
+/give Player974 bottleinacloud:cloud_in_bottle
+/teleport Player974 ~ 197 ~
+/give Player817 bottleinacloud:cloud_in_bottle 63
+/locate structure ravine
+/tick freeze
+/give Player836 bottleinacloud:compressed_cloud_blockitem
+/tick freeze
+/give Player71 bottleinacloud:cloud_in_bottle
+/teleport Player71 ~ 197 ~
+/teleport ~ 197 ~
+/tp ~ 196 ~
+/give Player141 bottleinacloud:soul_bottle
+/give Player141 bottleinacloud:compressed_cloud_blockitem
+/tp ~ 197 ~
+/time set noon
+/tick freeze
+/tick unfreeze
+/give Player256 minecraft:glass_bottle 64
+/tick freeze
+/setblock 171 64 24 bottleinacloud:cloud_block
+/tick unfreeze
+/give Player256 bottleinacloud:cloud_in_bottle

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/bottleinacloud.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/bottleinacloud.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/bottleinacloud.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/bottleinacloud.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/bottleinacloud.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/bottleinacloud.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/bottleinacloud.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/bottleinacloud.neoforge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/bottleinacloud.neoforge.test.iml" />
+    </modules>
+  </component>
+</project>

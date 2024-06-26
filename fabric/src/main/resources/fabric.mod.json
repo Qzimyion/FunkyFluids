@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "bottleinacloud",
+  "version": "${version}",
+  "name": "BottleInACloud",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/bottleinacloud/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.qzimyion.fabric.BottleInACloudModFabric"
+    ],
+    "client": [
+      "com.qzimyion.fabric.client.BottleCloudFabricClient"
+    ],
+    "fabric-datagen": [
+      "com.qzimyion.fabric.DatagenFabric"
+    ]
+  },
+  "mixins": [
+    "bottleinacloud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.20.6",
+    "java": ">=21",
+    "architectury": ">=12.1.2",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

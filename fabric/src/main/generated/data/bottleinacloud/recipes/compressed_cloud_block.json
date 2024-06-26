@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "bottleinacloud:cloud_in_bottle"
+    },
+    {
+      "item": "bottleinacloud:cloud_in_bottle"
+    },
+    {
+      "item": "bottleinacloud:cloud_in_bottle"
+    },
+    {
+      "item": "bottleinacloud:cloud_in_bottle"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "bottleinacloud:compressed_cloud_block"
+  }
+}

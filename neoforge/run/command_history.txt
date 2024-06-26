@@ -1,0 +1,4 @@
+/give Dev bottleinacloud:cloud_in_bottle
+/give Dev bottleinacloud:soul_bottle
+/locate biome minecraft:stony_peaks
+/tp @s 3440 69 2255
