@@ -1,0 +1,25 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-06-29 17:41:04 +0530"
+    },
+    "done": true
+  },
+  "bottleinacloud:recipes/tools/compressed_cloud_block": {
+    "criteria": {
+      "has_cloud_bottle": "2024-06-29 17:43:24 +0530"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:badlands": "2024-06-29 17:42:35 +0530",
+      "minecraft:eroded_badlands": "2024-06-29 17:41:35 +0530",
+      "minecraft:desert": "2024-06-29 17:43:01 +0530",
+      "minecraft:forest": "2024-06-29 17:41:05 +0530",
+      "minecraft:warm_ocean": "2024-06-29 17:41:54 +0530"
+    },
+    "done": false
+  },
+  "DataVersion": 3839
+}

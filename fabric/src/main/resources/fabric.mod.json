@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
   "id": "bottleinacloud",
-  "version": "${version}",
-  "name": "BottleInACloud",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "version": "1.0",
+  "name": "Funky Fluids",
+  "description": "Adds some Non-Newtonian Fluids to minecraft with unique uses and abilities.",
   "authors": [
-    "Me!"
+    "Qzimyion"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": " ",
+    "sources": "https://github.com/Qzimyion/FunkyFluids"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/bottleinacloud/icon.png",
+  "license": "MIT",
+  "icon": "assets/bottleinacloud/logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [

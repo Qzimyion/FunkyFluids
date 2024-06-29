@@ -200,5 +200,11 @@
     },
     "done": true
   },
+  "bottleinacloud:recipes/tools/compressed_cloud_block": {
+    "criteria": {
+      "has_cloud_bottle": "2024-06-27 21:17:03 +0530"
+    },
+    "done": true
+  },
   "DataVersion": 3839
 }

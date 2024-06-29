@@ -28,3 +28,14 @@
 /setblock 171 64 24 bottleinacloud:cloud_block
 /tick unfreeze
 /give Player256 bottleinacloud:cloud_in_bottle
+/tick rate 2000
+/gamerule randomTickSpeed 2000
+/tick rate 20
+/effect give Player750 minecraft:night_vision infinite
+/effect clear
+/weather clear
+/tick rate 20
+/locate biome minecraft:eroded_badlands
+/tp @s 4086 72 -698
+/locate biome minecraft:badlands
+/tp @s 7711 71 -3293
