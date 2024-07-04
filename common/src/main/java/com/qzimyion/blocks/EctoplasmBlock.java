@@ -7,6 +7,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
+import net.minecraft.util.valueproviders.ConstantFloat;
+import net.minecraft.util.valueproviders.UniformFloat;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -14,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.effects.PlaySoundEffect;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -47,7 +50,7 @@ public class EctoplasmBlock extends NonNewtonianBlock implements BucketPickup {
             BlockState stateToPlace = block.getStateForPlacement(blockContext);
             if (stateToPlace != null && stateToPlace.canSurvive(level, blockPos)) {
                 level.setBlockAndUpdate(blockPos, stateToPlace);
-                level.playSound(player, blockPos, SoundEvents.SOUL_ESCAPE, SoundSource.BLOCKS, 1F, 1F);
+                new PlaySoundEffect(SoundEvents.SOUL_ESCAPE,  ConstantFloat.of(0.6F), UniformFloat.of(0.6F, 1.0F));
                 level.playSound(player, blockPos, stateToPlace.getSoundType().getPlaceSound(), SoundSource.BLOCKS, 1F, 1F);
                 ParticleUtils.spawnParticles(level, targetPos, 3*2, 3.0, 3.0, true, ParticleTypes.SOUL);
                 if (!player.getAbilities().instabuild) {

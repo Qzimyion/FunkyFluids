@@ -1,12 +1,17 @@
 package com.qzimyion.neoforge;
 
 import com.qzimyion.registry.ItemRegistry;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 
 import com.qzimyion.BottleInACloudModMain;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(BottleInACloudModMain.MOD_ID)
@@ -14,6 +19,7 @@ public class BottleInACloudNeoForge {
 
     public BottleInACloudNeoForge(IEventBus modEventBus) {
         BottleInACloudModMain.init();
+        modEventBus.addListener(this::buildContents);
         modEventBus.addListener(this::buildContents);
     }
 

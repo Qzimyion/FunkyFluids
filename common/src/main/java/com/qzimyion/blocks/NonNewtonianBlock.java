@@ -1,11 +1,14 @@
 package com.qzimyion.blocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
@@ -19,6 +22,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("OptionalGetWithoutIsPresent")
 public class NonNewtonianBlock extends HalfTransparentBlock {
 
     public NonNewtonianBlock(Properties properties) {
@@ -60,10 +64,10 @@ public class NonNewtonianBlock extends HalfTransparentBlock {
         super.entityInside(state, level, pos, entity);
     }
 
-
-
     public static boolean hasFeatherFallingIV(LivingEntity livingEntity) {
-        return EnchantmentHelper.getEnchantmentLevel(Enchantments.FEATHER_FALLING, livingEntity) == 4;
+        Holder.Reference<Enchantment> entry = livingEntity.level().registryAccess().registryOrThrow(Registries.ENCHANTMENT)
+                .getHolder(Enchantments.RESPIRATION).get();
+        return EnchantmentHelper.getEnchantmentLevel(entry, livingEntity) == 4;
     }
 
     @Override

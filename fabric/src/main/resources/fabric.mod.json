@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "bottleinacloud",
-  "version": "1.0",
+  "version": "1.1",
   "name": "Funky Fluids",
   "description": "Adds some Non-Newtonian Fluids to minecraft with unique uses and abilities.",
   "authors": [
@@ -30,9 +30,9 @@
   ],
   "depends": {
     "fabricloader": ">=0.15.11",
-    "minecraft": "~1.20.6",
+    "minecraft": "~1.21",
     "java": ">=21",
-    "architectury": ">=12.1.2",
+    "architectury": ">=13.0.3",
     "fabric-api": "*"
   },
   "suggests": {

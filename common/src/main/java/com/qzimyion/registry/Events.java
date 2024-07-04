@@ -6,9 +6,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.ParticleUtils;
+import net.minecraft.util.valueproviders.ConstantFloat;
+import net.minecraft.util.valueproviders.UniformFloat;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.effects.PlaySoundEffect;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -35,7 +38,7 @@ public class Events {
                     Player.setItemInHand(InteractionHand, newItem);
                     ParticleUtils.spawnParticles(level, targetPos, 3*2, 3.0, 3.0, true, ParticleTypes.SOUL);
                     Player.playSound(SoundEvents.BOTTLE_FILL_DRAGONBREATH);
-                    Player.playSound(SoundEvents.SOUL_ESCAPE);
+                    new PlaySoundEffect(SoundEvents.SOUL_ESCAPE,  ConstantFloat.of(0.6F), UniformFloat.of(0.6F, 1.0F));
                     if (random.nextFloat() <= 0.1f){
                         level.setBlock(targetPos, Blocks.SOUL_SOIL.defaultBlockState(), 2);
                     }
@@ -48,7 +51,7 @@ public class Events {
                     ItemStack newItem = ItemUtils.createFilledResult(heldItem, Player, ItemRegistry.ECTOPLASM_BOTTLE.get().getDefaultInstance(), false);
                     Player.setItemInHand(InteractionHand, newItem);
                     Player.playSound(SoundEvents.BOTTLE_FILL_DRAGONBREATH);
-                    Player.playSound(SoundEvents.SOUL_ESCAPE);
+                    new PlaySoundEffect(SoundEvents.SOUL_ESCAPE,  ConstantFloat.of(0.6F), UniformFloat.of(0.6F, 1.0F));
                     level.setBlock(targetPos, Blocks.AIR.defaultBlockState(), 2);
                 }
             }
